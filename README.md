@@ -5,7 +5,7 @@ RAMP is a C++ library providing an API for:
  * Asynchronous two-sided Message Passing
  * Asynchronous one-sided Remote Procedure Calls (RPC)
 
-The Documentation can be found here: https://readthedocs.io/ramp
+The Documentation can be found here: https://ramp.readthedocs.io/en/latest
 
 The focus is to provide a modern C++ interface for high performance message
 passing. Simple message passing is extended by a Remote Procedure Call mechanism
@@ -25,6 +25,7 @@ following features:
 
  * High performance serialization (marshalling) framework
  * Intrinsic support for RDMA operations for zero copy optimizations
+ * Efficient, non-blocking, collective operations
  * Built for massive parallel systems
  * Adaptation to existing code via traits and defined interfaces
 
@@ -69,7 +70,10 @@ Prerequisites:
  * libfabric
 
 Build instructions and configuration options can be found here:
-https://readthedocs.io/ramp
+https://ramp.readthedocs.io/en/latest/build
+
+Documentation on how to run RAMP applications can be found here:
+https://ramp.readthedocs.io/en/latest/run
 
 ## Performance
 
@@ -78,9 +82,9 @@ TBD
 ## Interoperability with other Libraries
 
 The interoperability features are discussed in the documentation here:
-https://readthedocs.io/ramp
+https://ramp.readthedocs.io/en/latest/interoperability
 
 ## Relation to other libraries/APIS
 
 The relation and differences, as well as migration guides are provided here:
-https://readthedocs.io/ramp
+https://ramp.readthedocs.io/en/latest/related_work
