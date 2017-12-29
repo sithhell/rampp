@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'RAMP'
+project = u'RAMPP'
 copyright = u'2017, The STE||AR-Group'
 author = u'The STE||AR-Group'
 
@@ -239,7 +239,7 @@ html_show_copyright = True
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'RAMP'
+htmlhelp_basename = 'RAMPP'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -265,7 +265,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'RAMP.tex', u'RAMP Documentation',
+    (master_doc, 'RAMPP.tex', u'RAMPP Documentation',
      u'Thomas Heller', 'manual'),
 ]
 
@@ -307,7 +307,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ramp', u'RAMP Documentation',
+    (master_doc, 'rampp', u'RAMPP Documentation',
      [author], 1)
 ]
 
@@ -322,8 +322,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'RAMP', u'RAMP Documentation',
-     author, 'RAMP', 'Remote Asynchronous Message Passing for C++.',
+    (master_doc, 'RAMPP', u'RAMPP Documentation',
+     author, 'RAMPP', 'Remote Asynchronous Message Passing Primitives for C++.',
      'Miscellaneous'),
 ]
 
