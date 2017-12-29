@@ -3,7 +3,7 @@
    Distributed under the Boost Software License, Version 1.0. (See accompanying
    file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-Remote Asynchronous Message Passing (RAMP)
+Remote Asynchronous Message Passing Primitives (RAMPP)
 ==========================================
 
 RAMP is a C++ library providing an API for:
@@ -22,7 +22,7 @@ Message Passing and Remote Task invocations.
 
 Asynchronity is managed by reusing the Asynchronous Provider and Asynchronous
 Return Object concepts as defined by the C++ Standard. That is, all functions
-return a `ramp::future<T>` object.
+return a `rampp::future<T>` object.
 
 RAMP provides a High Performance solution to message passing by offering the
 following features:
@@ -35,30 +35,30 @@ following features:
 
 Example::
 
-    #include <ramp/ramp.hpp>
+    #include <rampp/rampp.hpp>
     #include <iostream>
 
     int main()
     {
-        // Initialize ramp
-        auto world = ramp::init(argc, argv);
+        // Initialize rampp
+        auto world = rampp::init(argc, argv);
 
         // Get our own location
-        auto here = ramp::here(world);
+        auto here = rampp::here(world);
 
         // Get our neighbor
         auto next = here + 1;
 
         // Invoke Remote Procedure
-        ramp::future f = ramp::async_execute(next,
-            []() { std::cout << "Hello World from " << ramp::here() << "\n"; });
+        rampp::future f = rampp::async_execute(next,
+            []() { std::cout << "Hello World from " << rampp::here() << "\n"; });
 
         // Block until message has been sent
         f.get();
 
         // Send/Recv from neighbor
-        ramp::future send_future = ramp::send(next, here.rank());
-        ramp::future recv_future = ramp::recv<int>(next);
+        rampp::future send_future = rampp::send(next, here.rank());
+        rampp::future recv_future = rampp::recv<int>(next);
 
         std::cout << here.rank() << ": received \"" << recv_future.get() << "\"\n";
     }
